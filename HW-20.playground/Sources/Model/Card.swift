@@ -16,6 +16,7 @@ public struct Card: Decodable {
     public let rarity: String
     public let power: String?
     public let toughness: String?
+    public let artist: String
     
     enum CodingKeys: String, CodingKey {
         case name
@@ -25,9 +26,10 @@ public struct Card: Decodable {
         case rarity
         case power
         case toughness
+        case artist
     }
     
-    public init(name: String, type: String, manaCost: String?, set: String, rarity: String, power: String?, toughness: String?) {
+    public init(name: String, type: String, manaCost: String?, set: String, rarity: String, power: String?, toughness: String?, artist: String) {
         self.name = name
         self.type = type
         self.manaCost = manaCost
@@ -35,6 +37,7 @@ public struct Card: Decodable {
         self.rarity = rarity
         self.power = power
         self.toughness = toughness
+        self.artist = artist
     }
 }
 
