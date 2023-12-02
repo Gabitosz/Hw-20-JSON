@@ -1,3 +1,5 @@
-import UIKit
+import Foundation
 
-var greeting = "Hello, playground"
+
+NetworkRequestManager.fetchData(for: "Black Lotus")
+NetworkRequestManager.fetchData(for: "Opt")
