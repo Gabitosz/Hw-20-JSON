@@ -39,5 +39,18 @@ public struct Card: Decodable {
         self.toughness = toughness
         self.artist = artist
     }
+    
+    public static func printInfoAbout(card: Card) {
+        print("Card Name: \(card.name)")
+        print("Card Type: \(card.type)")
+        print("Mana Cost: \(card.manaCost?.replacingOccurrences(of: "{", with: "").replacingOccurrences(of: "}", with: "") ?? "N/A")")
+        print("Set: \(card.set)")
+        print("Rarity: \(card.rarity)")
+        print("Power: \(card.power ?? "N/A")")
+        print("Toughness: \(card.toughness ?? "N/A")")
+        print("Artist: \(card.artist)")
+        print("-------------------------------------")
+    }
 }
+
 

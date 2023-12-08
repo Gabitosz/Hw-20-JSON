@@ -4,8 +4,8 @@ public class NetworkRequestManager {
     
     public init() {}
     
-    public static func fetchData(for cardName: String) {
-        let url = "https://api.magicthegathering.io/v1/cards?name=\(cardName)"
+    public static func fetchData(for cardName: String, from urlInfo: String) {
+        let url = urlInfo + cardName
         
         guard let url = URL(string: url) else { return }
         
@@ -15,7 +15,7 @@ public class NetworkRequestManager {
             } else if let response = response as? HTTPURLResponse, response.statusCode == 200 {
                 print("Request is Successful! Status code: \(response.statusCode)")
                 if let data = data {
-                    JsonParser.parseJson(with: data)
+                    JsonParser.parseJson(with: data, countOfCards: 100)
                 }
             }
         }.resume()
