@@ -23,8 +23,9 @@ public class JsonParser {
     }
     
     static func printInfoAboutCards(cardsInJson: Cards, countOfNeededCards: Int) {
-        for card in cardsInJson.cards[0...countOfNeededCards - 1] {
-            if card.name.contains("opt") || card.name.contains("Opt") {
+        for card in cardsInJson.cards {
+            
+            if card.name.contains("opt") || card.name.contains("Opt")  {
                 continue
             }
             Card.printInfoAbout(card: card)

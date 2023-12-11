@@ -5,3 +5,5 @@ NetworkRequestManager.fetchData(for: "Black Lotus", from: "https://api.magictheg
 NetworkRequestManager.fetchData(for: "Opt", from: "https://api.magicthegathering.io/v1/cards?name=")
 
 
+//NetworkRequestManager.fetchData(for: "Black Lotus | Opt", from: "https://api.magicthegathering.io/v1/cards?name=")
+//
