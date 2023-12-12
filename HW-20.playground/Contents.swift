@@ -1,3 +1,9 @@
-import UIKit
+import Foundation
 
-var greeting = "Hello, playground"
+
+NetworkRequestManager.fetchData(for: "Black Lotus", from: "https://api.magicthegathering.io/v1/cards?name=")
+NetworkRequestManager.fetchData(for: "Opt", from: "https://api.magicthegathering.io/v1/cards?name=")
+
+
+//NetworkRequestManager.fetchData(for: "Black Lotus | Opt", from: "https://api.magicthegathering.io/v1/cards?name=")
+//
